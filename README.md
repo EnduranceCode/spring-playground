@@ -12,4 +12,7 @@ At **Pluralsight** the courses are grouped in [paths](https://www.pluralsight.co
 
 ### Core Spring
 
-1. [Spring: The Big Picture](https://app.pluralsight.com/library/courses/spring-big-picture/table-of-contents)
+1. [Spring: The Big Picture](https://app.pluralsight.com/library/courses/spring-big-picture/table-of-contents);
+2. [Spring Fundamentals](https://app.pluralsight.com/library/courses/spring-fundamentals/table-of-contents);
+
+	The code written following this course is stored in the folder [`spring-fundamentals`](./spring-fundamentals) of this repository.
