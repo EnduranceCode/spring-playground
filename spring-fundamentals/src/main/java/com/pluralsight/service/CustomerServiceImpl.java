@@ -8,7 +8,7 @@ import com.pluralsight.repository.HibernateCustomerRepositoryImpl;
 
 public class CustomerServiceImpl implements CustomerService {
 
-	public CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
 
 	/*
 	 * (non-Javadoc)
