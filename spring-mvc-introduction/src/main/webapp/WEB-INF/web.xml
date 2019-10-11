@@ -13,6 +13,12 @@
 			<param-value>/WEB-INF/config/servlet-config.xml</param-value>
 		</init-param>
 	</servlet>
+	
+	<!-- Servlet Mapping -->
+	<servlet-mapping>
+		<servlet-name>fitTrackerServlet</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
 
 	<display-name>Archetype Created Web Application</display-name>
 </web-app>
