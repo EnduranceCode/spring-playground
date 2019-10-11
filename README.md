@@ -16,3 +16,13 @@ At **Pluralsight** the courses are grouped in [paths](https://www.pluralsight.co
 2. [Spring Fundamentals](https://app.pluralsight.com/library/courses/spring-fundamentals/table-of-contents);
 
 	The code written following this course is stored in the folder [`spring-fundamentals`](./spring-fundamentals) of this repository.
+
+3. [Introduction to Spring MVC](https://app.pluralsight.com/library/courses/springmvc-intro/table-of-contents);
+
+	The code written following this course is stored in the folder [`spring-mvc-introduction`](./spring-mvc-introduction) of this repository.
+
+### Spring Framework: Building Web Applications and Services
+
+1. [Introduction to Spring MVC](https://app.pluralsight.com/library/courses/springmvc-intro/table-of-contents);
+
+	This course is also included in the *path* **Core Spring** and code written following it is stored in the folder [`spring-mvc-introduction`](./spring-mvc-introduction) of this repository.
