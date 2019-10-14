@@ -50,6 +50,27 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>5.1.0.Final</version>
 		</dependency>
+
+		<!-- Content Negotiation -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.4.1</version>
+		</dependency>
+
+		<!-- Content Negotiation -->
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.6</version>
+		</dependency>
+
+		<!-- Content Negotiation -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>4.2.5.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
