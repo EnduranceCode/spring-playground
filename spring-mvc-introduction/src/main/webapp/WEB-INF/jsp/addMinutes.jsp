@@ -13,6 +13,10 @@
 <body>
 	<h1>Add Minutes Exercised</h1>
 
+	<p>
+		Language: <a href="?language=en">English</a> | <a href="?language=es">Spanish</a>
+	</p>
+
 	<!-- The commandName value links the form to the @ModelAttribute with the same value -->
 	<form:form commandName="exercise">
 		<table>

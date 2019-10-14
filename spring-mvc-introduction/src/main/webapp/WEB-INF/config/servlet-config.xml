@@ -12,6 +12,17 @@
 
 	<context:component-scan base-package="com.pluralsight.controller" />
 
+	<mvc:interceptors>
+		<!-- Locale Interceptor-->
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+			p:paramName="language" />
+	</mvc:interceptors>
+
+	<!-- Locale Bean Resolver -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver"
+		p:defaultLocale="en" />
+
 	<!-- Bean for the Resource Bundle -->
 	<!-- The "p:basename" value holds the properties file name to be used -->
 	<bean id="messageSource"
