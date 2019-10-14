@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE>
@@ -16,7 +17,7 @@
 	<form:form commandName="exercise">
 		<table>
 			<tr>
-				<td>Minutes Exercise for Today</td>
+				<td><spring:message code="goal.text" /></td>
 				<td><form:input path="minutes" /></td>
 			</tr>
 
