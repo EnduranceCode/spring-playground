@@ -14,10 +14,16 @@
 		</init-param>
 	</servlet>
 	
-	<!-- Servlet Mapping -->
+	<!-- Servlet Mapping for *.html requests -->
 	<servlet-mapping>
 		<servlet-name>fitTrackerServlet</servlet-name>
 		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Servlet Mapping for PDF requests -->
+	<servlet-mapping>
+		<servlet-name>fitTrackerServlet</servlet-name>
+		<url-pattern>/pdf/**</url-pattern>
 	</servlet-mapping>
 
 	<display-name>Archetype Created Web Application</display-name>

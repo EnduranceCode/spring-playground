@@ -7,6 +7,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 	<mvc:annotation-driven />
+
+	<mvc:resources location="pdf" mapping="/pdf/**" />
+
 	<context:component-scan base-package="com.pluralsight.controller" />
 
 	<bean
