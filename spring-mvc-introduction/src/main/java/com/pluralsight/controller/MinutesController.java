@@ -10,6 +10,7 @@ import com.pluralsight.model.Exercise;
 public class MinutesController {
 
     @RequestMapping(value = "/addMinutes")
+    /* The @ModelAttribute value corresponds to the object's name that is linked to */
     public String addMinutes(@ModelAttribute("exercise") Exercise exercise) {
 
         System.out.println("Exercise: " + exercise.getMinutes());
