@@ -23,7 +23,7 @@ public class RestControllerTest {
         ride.setDuration(30);
 
         ride = restTemplate.postForObject("http://localhost:8180/RideTracker/ride", ride, Ride.class);
-        
+
         System.out.println("Ride: " + ride);
     }
 
