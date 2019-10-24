@@ -6,6 +6,5 @@ import com.pluralsight.model.Ride;
 
 public interface RideRepository {
 
-	List<Ride> getRides();
-
+    List<Ride> getRides();
 }

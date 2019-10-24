@@ -2,6 +2,10 @@ target/
 bin/
 !.mvn/wrapper/maven-wrapper.jar
 
+# Files with credentials and other local configurations #
+#########################################################
+**/database-config.properties
+
 
 # Compiled source #
 ###################
