@@ -13,18 +13,29 @@ import org.junit.Test;
 
 public class RestControllerTest {
 
-	@Test(timeout=3000)
-	public void testGetRides() {
-		RestTemplate restTemplate = new RestTemplate();
+    @Test(timeout = 3000)
+    public void testCreateRide() {
 
-		ResponseEntity<List<Ride>> ridesResponse = restTemplate.exchange(
-				"http://localhost:8180/RideTracker/rides", HttpMethod.GET,
-				null, new ParameterizedTypeReference<List<Ride>>() {
-				});
-		List<Ride> rides = ridesResponse.getBody();
+        RestTemplate restTemplate = new RestTemplate();
 
-		for (Ride ride : rides) {
-			System.out.println("Ride name: " + ride.getName());
-		}
-	}
+        Ride ride = new Ride();
+        ride.setName("Bobsled Trail Ride");
+        ride.setDuration(35);
+
+        restTemplate.put("http://localhost:8180/RideTracker/ride", ride);
+    }
+
+    @Test(timeout = 3000)
+    public void testGetRides() {
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<List<Ride>> ridesResponse = restTemplate.exchange("http://localhost:8180/RideTracker/rides",
+                HttpMethod.GET, null, new ParameterizedTypeReference<List<Ride>>() {
+                });
+        List<Ride> rides = ridesResponse.getBody();
+
+        for (Ride ride : rides) {
+            System.out.println("Ride name: " + ride.getName());
+        }
+    }
 }
