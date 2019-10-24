@@ -16,6 +16,12 @@ public class RideRepositoryImpl implements RideRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Override
+    public Ride createRide(Ride ride) {
+        
+        return null;
+    }
+    
+    @Override
     public List<Ride> getRides() {
         Ride ride = new Ride();
         ride.setName("Corner Canyon");
