@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.1.RELEASE</version>
+	</parent>
+
+	<groupId>guru.springframework</groupId>
+	<artifactId>sfg-pet-clinic</artifactId>
+	<version>0.0.3-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>sfg-pet-clinic</name>
+	<description>SFG Pet Clinic Project</description>
+
+	<modules>
+		<module>sfg-pet-clinic-data</module>
+		<module>sfg-pet-clinic-web</module>
+	</modules>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Workaround to fix the Bug 547340 on Eclipse -->
+		<!-- Permanent bug fix: https://bugs.eclipse.org/bugs/show_bug.cgi?id=547340#c9 -->
+		<!-- Workaround fix found on https://stackoverflow.com/a/56275263 -->
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+
+		<!-- Web dependencies -->
+		<webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
+		<webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
+		<webjars-jquery.version>2.2.4</webjars-jquery.version>
+		<wro4j.version>1.8.0</wro4j.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- START: webjars -->
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>jquery</artifactId>
+				<version>${webjars-jquery.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>jquery-ui</artifactId>
+				<version>${webjars-jquery-ui.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>bootstrap</artifactId>
+				<version>${webjars-bootstrap.version}</version>
+			</dependency>
+			<!-- END: webjars -->
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- Fix suggested by this https://stackoverflow.com/a/51066763 -->
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+
+				<!-- Workround to fix bug as suggested in https://issues.apache.org/jira/browse/MRELEASE-902 -->
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.shared</groupId>
+						<artifactId>maven-invoker</artifactId>
+						<version>2.2</version>
+					</dependency>
+				</dependencies>
+
+				<configuration>
+					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<scm>
+		<developerConnection>scm:git:git@github.com:EnduranceCode/spring5-begginer-guru.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+</project>

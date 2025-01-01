@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spring Framework 5 - Beginner to Guru : Spring Boot Jokes App</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+</head>
+
+<body>
+	<section class="hero">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">Spring Framework 5 - Beginner to Guru</h1>
+				<h2 class="subtitle">Spring Boot Jokes App</h2>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="card">
+			<div class="card-content">
+				<p th:text="${'&ldquo;' + joke + '&rdquo;'}" class="title">
+					Random Chuck Norris Quote
+				</p>
+				<p class="subtitle">Chuck Norris</p>
+			</div>
+
+			<footer class="card-footer">
+				<p class="card-footer-item">
+					<span class="tag is-warning">Parody</span>
+				</p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
