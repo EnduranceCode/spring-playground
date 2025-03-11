@@ -4,12 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mastering Thymeleaf with Spring Boot</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        data-th-href="@{/css/bulma.min.css}"
+  >
 </head>
 <body>
-<section class="hero  is-info">
+
+<section class="hero is-info">
   <div class="hero-body">
-    <p class="title">Spring Framework Guru</p>
+    <a href="/" data-th-href="@{/}">
+      <p class="title">Spring Framework Guru</p>
+    </a>
     <p class="subtitle">Online Courses for Spring Framework</p>
   </div>
 </section>
@@ -20,8 +26,10 @@
 
     <div class="columns">
       <div class="column">
-        <figure class="image is-16by9">
-          <img src="https://bulma.io/assets/images/placeholders/640x360.png" alt="Placeholder image"/>
+        <figure class="image">
+          <img src="https://bulma.io/assets/images/placeholders/640x360.png"
+               data-th-src="@{/img/SpringIntroThumb.png}"
+               alt="Product image"/>
         </figure>
       </div>
 
@@ -30,16 +38,23 @@
         <div class="block">
           <div class="content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit metus gravida leo congue
-              fermentum. Pellentesque orci lorem, blandit vitae ligula sit amet, volutpat sollicitudin mauris. Cras
-              vestibulum, libero at lacinia posuere, risus turpis lobortis tellus, id molestie ligula lorem nec enim.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit metus
+              gravida leo congue
+              fermentum. Pellentesque orci lorem, blandit vitae ligula sit amet, volutpat
+              sollicitudin mauris. Cras
+              vestibulum, libero at lacinia posuere, risus turpis lobortis tellus, id molestie
+              ligula lorem nec enim.
               Donec sem dui, sodales vitae lectus eget, pellentesque bibendum nunc.
             </p>
             <p>
-              Phasellus cursus augue a odio volutpat rutrum. Suspendisse tincidunt, ex consectetur laoreet posuere, dui
-              purus sagittis metus, nec luctus urna enim vitae leo. Maecenas in bibendum dui. Sed suscipit felis sit
-              amet luctus egestas. Mauris at volutpat nisl, pulvinar gravida dui. Morbi cursus orci non tellus facilisis
-              ornare. Praesent sed volutpat risus, placerat volutpat risus. Proin et rutrum tortor, sit amet vestibulum
+              Phasellus cursus augue a odio volutpat rutrum. Suspendisse tincidunt, ex consectetur
+              laoreet posuere, dui
+              purus sagittis metus, nec luctus urna enim vitae leo. Maecenas in bibendum dui. Sed
+              suscipit felis sit
+              amet luctus egestas. Mauris at volutpat nisl, pulvinar gravida dui. Morbi cursus orci
+              non tellus facilisis
+              ornare. Praesent sed volutpat risus, placerat volutpat risus. Proin et rutrum tortor,
+              sit amet vestibulum
               libero.
             </p>
           </div>
