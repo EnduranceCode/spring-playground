@@ -1,3 +1,6 @@
 spring:
   application:
     name: sfg-thymeleaf-course
+  messages:
+    basename: messages
+    encoding: UTF-8

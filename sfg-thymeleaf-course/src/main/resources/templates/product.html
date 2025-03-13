@@ -16,7 +16,7 @@
     <a href="/" data-th-href="@{/}">
       <p class="title">Spring Framework Guru</p>
     </a>
-    <p class="subtitle">Online Courses for Spring Framework</p>
+    <p data-th-text="#{page.product.hero-subtitle}" class="subtitle">Online Courses for Spring Framework</p>
   </div>
 </section>
 
@@ -61,7 +61,7 @@
         </div>
 
         <div class="block">
-          <button class="button is-link is-pulled-right">Buy now</button>
+          <button data-th-text="#{page.product.button.buy-now}" class="button is-link is-pulled-right">Buy now</button>
         </div>
       </div>
     </div>
