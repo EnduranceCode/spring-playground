@@ -11,14 +11,7 @@
 </head>
 <body>
 
-<section class="hero is-info">
-  <div class="hero-body">
-    <a href="/" data-th-href="@{/}">
-      <p class="title">Spring Framework Guru</p>
-    </a>
-    <p data-th-text="#{page.product.hero-subtitle}" class="subtitle">Online Courses for Spring Framework</p>
-  </div>
-</section>
+<section data-th-replace="fragments/layout::hero"></section>
 
 <section class="section">
   <div class="container">
@@ -67,5 +60,7 @@
     </div>
   </div>
 </section>
+
+<footer data-th-replace="fragments/layout::footer"></footer>
 </body>
 </html>

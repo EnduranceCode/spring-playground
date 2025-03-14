@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mastering Thymeleaf with Spring Boot</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        data-th-href="@{/css/bulma.min.css}"
+  >
+</head>
+<body>
+<section data-th-fragment="hero" class="hero is-info">
+  <div class="hero-body">
+    <a href="/" data-th-href="@{/}">
+      <p class="title">Spring Framework Guru</p>
+    </a>
+    <p data-th-text="#{page.product.hero-subtitle}" class="subtitle">Online Courses for Spring Framework</p>
+  </div>
+</section>
+
+<footer data-th-fragment="footer" class="footer has-background-grey">
+  <div class="content has-text-centered">
+    <p><a href="https://www.udemy.com/course/mastering-thymeleaf-with-spring/">Mastering Thymeleaf with Spring Boot</a>
+      is presented by <a href="https://twitter.com/serge_a_storms">John Thompson</a></p>
+  </div>
+</footer>
+</body>
+</html>
