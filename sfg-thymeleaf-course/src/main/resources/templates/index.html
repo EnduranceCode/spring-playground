@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<section data-th-replace="fragments/layout::hero"></section>
+<section data-th-replace="~{fragments/layout::hero}"></section>
 
 <section class="section">
   <div class="container">
@@ -21,7 +21,7 @@
     <div class="columns">
       <div class="column">
         <div class="card">
-          <a href="product.html" data-th-href="@{/product}">
+          <a href="product.html" data-th-href="@{/product/1}">
             <div class="card-image">
               <figure class="image">
                 <img
@@ -56,7 +56,7 @@
 
       <div class="column">
         <div class="card">
-          <a href="product.html" data-th-href="@{/product}">
+          <a href="product.html" data-th-href="@{/product/4}">
             <div class="card-image">
               <figure class="image">
                 <img
@@ -91,7 +91,7 @@
 
       <div class="column">
         <div class="card">
-          <a href="product.html" data-th-href="@{/product}">
+          <a href="product.html" data-th-href="@{/product/5}">
             <div class="card-image">
               <figure class="image">
                 <img
@@ -128,7 +128,7 @@
     <div class="columns">
       <div class="column">
         <div class="card">
-          <a href="product.html" data-th-href="@{/product}">
+          <a href="product.html" data-th-href="@{/product/6}">
             <div class="card-image">
               <figure class="image">
                 <img
@@ -164,7 +164,7 @@
 
       <div class="column">
         <div class="card">
-          <a href="product.html" data-th-href="@{/product}">
+          <a href="product.html" data-th-href="@{/product/2}">
             <div class="card-image">
               <figure class="image">
                 <img
@@ -190,7 +190,7 @@
 
       <div class="column">
         <div class="card">
-          <a href="product.html" data-th-href="@{/product}">
+          <a href="product.html" data-th-href="@{/product/3}">
             <div class="card-image">
               <figure class="image">
                 <img
@@ -226,6 +226,6 @@
   </div>
 </section>
 
-<footer data-th-replace="fragments/layout::footer"></footer>
+<footer data-th-replace="~{fragments/layout::footer}"></footer>
 </body>
 </html>
