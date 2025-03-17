@@ -24,6 +24,15 @@
                data-th-src="@{'/img/' + ${product.imageUrl}}"
                alt="Product image"/>
         </figure>
+
+        <div class="level mt-1 ml-4">
+          <div class="level-left">
+            <div data-th-each="productCategory : ${product.productCategories}" class="level-item">
+              <span data-th-text="${productCategory.category}" class="tag is-link">Course Category</span>
+            </div>
+          </div>
+        </div>
+
         <div class="level mt-2">
           <div class="level-left">
             <div class="level-item pl-4">

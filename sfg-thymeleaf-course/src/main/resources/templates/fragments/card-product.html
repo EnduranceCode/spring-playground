@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Card Thymeleaf Fragment</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        data-th-href="@{/css/bulma.min.css}"
+  >
+</head>
+
+<body>
+<div data-th-fragment="card-product(product)" class="card">
+  <a data-th-href="@{'/product/' + ${product.id}}">
+    <div class="card-image">
+      <figure class="image">
+        <img
+            src="https://bulma.io/assets/images/placeholders/640x320.png"
+            data-th-src="@{'/img/' + ${product.imageUrl}}"
+            alt="Course image banner"
+        />
+      </figure>
+    </div>
+  </a>
+
+  <div class="card-content">
+    <p data-th-text="${product.courseName}" class="title">Course Name</p>
+    <div data-th-text="${product.courseSubtitle}" class="content">Course Subtitle</div>
+  </div>
+
+  <footer class="card-footer">
+    <div class="card-footer-item">
+      <figure class="image is-32x32">
+        <img class="is-rounded"
+             src="https://bulma.io/assets/images/placeholders/48x48.png"
+             data-th-src="@{'/img/' + ${product.author.image}}"
+             alt="Course instructor"
+        />
+      </figure>
+      <a href="https://twitter.com/serge_a_storms" class="ml-2">John Thompson</a>
+    </div>
+    <p data-th-text="${product.price >0 ? '$' + product.price : 'FREE'}" class="card-footer-item">Price</p>
+  </footer>
+</div>
+</body>
+</html>

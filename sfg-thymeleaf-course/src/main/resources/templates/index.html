@@ -19,208 +19,23 @@
     <h1 class="title is-1">Spring Framework Guru Courses</h1>
 
     <div class="columns">
-      <div class="column">
-        <div class="card">
-          <a href="product.html" data-th-href="@{/product/1}">
-            <div class="card-image">
-              <figure class="image">
-                <img
-                    src="https://bulma.io/assets/images/placeholders/640x320.png"
-                    data-th-src="@{/img/SpringIntroThumb.png}"
-                    alt="Spring Intro image banner"
-                />
-              </figure>
-            </div>
-          </a>
-
-          <div class="card-content">
-            <p class="title">Introduction to Spring</p>
-            <div class="content">Introductory Course for the Spring Framework</div>
-          </div>
-
-          <footer class="card-footer">
-            <div class="card-footer-item">
-              <figure class="image is-32x32">
-                <img class="is-rounded"
-                     src="https://bulma.io/assets/images/placeholders/48x48.png"
-                     data-th-src="@{/img/instructor_jt.jpg}"
-                     alt="Instructor John Thompson"
-                />
-              </figure>
-              <a href="https://twitter.com/serge_a_storms" class="ml-2">John Thompson</a>
-            </div>
-            <a href="#" class="card-footer-item">Free</a>
-          </footer>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <a href="product.html" data-th-href="@{/product/4}">
-            <div class="card-image">
-              <figure class="image">
-                <img
-                    src="https://bulma.io/assets/images/placeholders/640x320.png"
-                    data-th-src="@{/img/SpringCoreThumb.png}"
-                    alt="Spring Core image banner"
-                />
-              </figure>
-            </div>
-          </a>
-
-          <div class="card-content">
-            <p class="title">Spring Core</p>
-            <div class="content">The fundamentals of Spring Framework</div>
-          </div>
-
-          <footer class="card-footer">
-            <div class="card-footer-item">
-              <figure class="image is-32x32">
-                <img class="is-rounded"
-                     src="https://bulma.io/assets/images/placeholders/48x48.png"
-                     data-th-src="@{/img/instructor_jt.jpg}"
-                     alt="Instructor John Thompson"
-                />
-              </figure>
-              <a href="https://twitter.com/serge_a_storms" class="ml-2">John Thompson</a>
-            </div>
-            <a href="#" class="card-footer-item">$99</a>
-          </footer>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <a href="product.html" data-th-href="@{/product/5}">
-            <div class="card-image">
-              <figure class="image">
-                <img
-                    src="https://bulma.io/assets/images/placeholders/640x320.png"
-                    data-th-src="@{/img/SpringCoreAdvancedThumb.png}"
-                    alt="Spring Core Advance image banner"
-                />
-              </figure>
-            </div>
-          </a>
-
-          <div class="card-content">
-            <p class="title">Spring Core Advanced</p>
-            <div class="content">Advanced Topics of Spring Core</div>
-          </div>
-
-          <footer class="card-footer">
-            <div class="card-footer-item">
-              <figure class="image is-32x32">
-                <img class="is-rounded"
-                     src="https://bulma.io/assets/images/placeholders/48x48.png"
-                     data-th-src="@{/img/instructor_jt.jpg}"
-                     alt="Instructor John Thompson"
-                />
-              </figure>
-              <a href="https://twitter.com/serge_a_storms" class="ml-2">John Thompson</a>
-            </div>
-            <a href="#" class="card-footer-item">$99</a>
-          </footer>
-        </div>
+      <!--/* @see https://www.wimdeblauwe.com/blog/2021/09/14/thymeleaf-iteration-and-fragments/ */-->
+      <div
+          data-th-insert="~{fragments/card-product::card-product(${product})}"
+          data-th-each="product, iterator : ${products}"
+          data-th-if="${iterator.count gt 0 and iterator.count lt 4}"
+          class="column"
+      >
       </div>
     </div>
 
     <div class="columns">
-      <div class="column">
-        <div class="card">
-          <a href="product.html" data-th-href="@{/product/6}">
-            <div class="card-image">
-              <figure class="image">
-                <img
-                    src="https://bulma.io/assets/images/placeholders/640x320.png"
-                    data-th-src="@{/img/SpringCoreDevOpsThumb.png}"
-                    alt="Spring Core Dev Ops image banner"
-                />
-              </figure>
-            </div>
-          </a>
-
-          <div class="card-content">
-            <p class="title">Spring Core Dev Ops</p>
-            <div class="content">Managing and Deploying Spring Applications in the Enterprise
-            </div>
-          </div>
-
-          <footer class="card-footer">
-            <div class="card-footer-item">
-              <figure class="image is-32x32">
-                <img class="is-rounded"
-                     src="https://bulma.io/assets/images/placeholders/48x48.png"
-                     data-th-src="@{/img/instructor_jt.jpg}"
-                     alt="Instructor John Thompson"
-                />
-              </figure>
-              <a href="https://twitter.com/serge_a_storms" class="ml-2">John Thompson</a>
-            </div>
-            <a href="#" class="card-footer-item">$15</a>
-          </footer>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <a href="product.html" data-th-href="@{/product/2}">
-            <div class="card-image">
-              <figure class="image">
-                <img
-                    src="https://bulma.io/assets/images/placeholders/640x320.png"
-                    data-th-src="@{/img/SpringCoreUltimateThumb.png}"
-                    alt="Spring Core Ultimate image banner"
-                />
-              </figure>
-            </div>
-          </a>
-
-          <div class="card-content">
-            <p class="title">Spring Core Ultimate</p>
-            <div class="content">The Ultimate Bundle of my Spring Courses</div>
-          </div>
-
-          <footer class="card-footer">
-            <a href="#" class="card-footer-item">5 Courses Bundle</a>
-            <a href="#" class="card-footer-item">$147</a>
-          </footer>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <a href="product.html" data-th-href="@{/product/3}">
-            <div class="card-image">
-              <figure class="image">
-                <img
-                    src="https://bulma.io/assets/images/placeholders/640x320.png"
-                    data-th-src="@{/img/ThymeleafThumb.png}"
-                    alt="Thymeleaf image banner"
-                />
-              </figure>
-            </div>
-          </a>
-
-          <div class="card-content">
-            <p class="title">Thymeleaf</p>
-            <div class="content">Rocking out Thymeleaf with Spring</div>
-          </div>
-
-          <footer class="card-footer">
-            <div class="card-footer-item">
-              <figure class="image is-32x32">
-                <img class="is-rounded"
-                     src="https://bulma.io/assets/images/placeholders/48x48.png"
-                     data-th-src="@{/img/instructor_jt.jpg}"
-                     alt="Instructor John Thompson"
-                />
-              </figure>
-              <a href="https://twitter.com/serge_a_storms" class="ml-2">John Thompson</a>
-            </div>
-            <a href="#" class="card-footer-item">$15</a>
-          </footer>
-        </div>
+      <div
+          data-th-insert="~{fragments/card-product::card-product(${product})}"
+          data-th-each="product, iterator : ${products}"
+          data-th-if="${iterator.count gt 3 and iterator.count lt 7}"
+          class="column"
+      >
       </div>
     </div>
   </div>
