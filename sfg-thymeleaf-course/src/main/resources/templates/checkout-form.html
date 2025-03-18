@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mastering Thymeleaf with Spring Boot - Checkout Form</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        data-th-href="@{/css/bulma.min.css}"
+  >
+</head>
+
+<body>
+<section data-th-replace="~{fragments/layout::hero}"></section>
+
+<main class="section">
+  <div class="container is-max-tablet">
+    <form data-th-object="${checkoutDTO}" data-th-action="@{/do-checkout}" method="post" class="box">
+      <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+          <input
+              data-th-field="*{firstName}"
+              data-th-errorClass="is-danger"
+              type="text"
+              placeholder="First Name"
+              class="input"
+          >
+        </div>
+        <div data-th-if="${#fields.hasErrors('firstName')}">
+          <p
+              data-th-each="error : ${#fields.errors('firstName')}"
+              data-th-text="${error}"
+              class="help is-danger"
+          >
+            Error Message
+          </p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Last Name</label>
+        <div class="control">
+          <input
+              data-th-field="*{lastName}"
+              data-th-errorClass="is-danger"
+              type="text"
+              placeholder="Last Name"
+              class="input"
+          >
+        </div>
+        <div data-th-if="${#fields.hasErrors('lastName')}">
+          <p
+              data-th-each="error : ${#fields.errors('lastName')}"
+              data-th-text="${error}"
+              class="help is-danger"
+          >
+            Error Message
+          </p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Address Line 1</label>
+        <div class="control">
+          <input
+              data-th-field="*{addressLine1}"
+              data-th-errorClass="is-danger"
+              type="text"
+              placeholder="Address Line 1"
+              class="input"
+          >
+        </div>
+        <div data-th-if="${#fields.hasErrors('addressLine1')}">
+          <p
+              data-th-each="error : ${#fields.errors('addressLine1')}"
+              data-th-text="${error}"
+              class="help is-danger"
+          >
+            Error Message
+          </p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Address Line 2</label>
+        <div class="control">
+          <input data-th-field="*{addressLine2}" type="text" placeholder="Address Line 2" class="input">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">City</label>
+        <div class="control">
+          <input
+              data-th-field="*{city}"
+              data-th-errorClass="is-danger"
+              type="text" placeholder="City"
+              class="input"
+          >
+        </div>
+        <div data-th-if="${#fields.hasErrors('city')}">
+          <p
+              data-th-each="error : ${#fields.errors('city')}"
+              data-th-text="${error}"
+              class="help is-danger"
+          >
+            Error Message
+          </p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">State Code</label>
+        <div class="control">
+          <input
+              data-th-field="*{stateCode}"
+              data-th-errorClass="is-danger"
+              type="text"
+              placeholder="State Code"
+              class="input"
+          >
+        </div>
+        <div data-th-if="${#fields.hasErrors('stateCode')}">
+          <p
+              data-th-each="error : ${#fields.errors('stateCode')}"
+              data-th-text="${error}"
+              class="help is-danger"
+          >
+            Error Message
+          </p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Zip Code</label>
+        <div class="control">
+          <input
+              data-th-field="*{zipCode}"
+              data-th-errorClass="is-danger"
+              type="text"
+              placeholder="Zip Code"
+              class="input"
+          >
+        </div>
+        <div data-th-if="${#fields.hasErrors('zipCode')}">
+          <p
+              data-th-each="error : ${#fields.errors('zipCode')}"
+              data-th-text="${error}"
+              class="help is-danger"
+          >
+            Error Message
+          </p>
+        </div>
+      </div>
+
+      <div data-th-if="${#fields.hasErrors('*')}" class="notification is-danger mt-6">
+        <button class="delete"></button>
+        <span data-th-text="#{page.checkout-form.has-errors}">Error Message!</span>
+      </div>
+
+      <div class="field is-grouped pt-6">
+        <div class="control">
+          <button class="button is-link">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer data-th-replace="~{fragments/layout::footer}"></footer>
+</body>
+</html>

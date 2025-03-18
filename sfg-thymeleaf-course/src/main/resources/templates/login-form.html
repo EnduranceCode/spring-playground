@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mastering Thymeleaf with Spring Boot - Checkout Form</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        data-th-href="@{/css/bulma.min.css}"
+  >
+</head>
+
+<body>
+<section data-th-replace="~{fragments/layout::hero}"></section>
+
+<main class="section is-medium">
+  <div class="container is-max-tablet">
+    <div class="box my-6">
+      <form data-th-object="${loginDTO}" data-th-action="@{/profile}" method="post">
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control">
+            <input
+                data-th-field="*{username}"
+                data-th-errorClass="is-danger"
+                type="text"
+                placeholder="Username"
+                class="input"
+            >
+          </div>
+          <div data-th-if="${#fields.hasErrors('username')}">
+            <p
+                data-th-each="error : ${#fields.errors('username')}"
+                data-th-text="${error}"
+                class="help is-danger"
+            >
+              Error Message
+            </p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input
+                data-th-field="*{password}"
+                data-th-errorClass="is-danger"
+                type="password"
+                placeholder="Password"
+                class="input"
+            >
+          </div>
+          <div data-th-if="${#fields.hasErrors('password')}">
+            <p
+                data-th-each="error : ${#fields.errors('password')}"
+                data-th-text="${error}"
+                class="help is-danger"
+            >
+              Error Message
+            </p>
+          </div>
+        </div>
+
+        <div data-th-if="${#fields.hasErrors('*')}" class="notification is-danger mt-6">
+          <button class="delete"></button>
+          <span data-th-text="#{page.checkout-form.has-errors}">Error Message!</span>
+        </div>
+
+        <div class="field is-grouped pt-6">
+          <div class="control">
+            <button class="button is-link">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer data-th-replace="~{fragments/layout::footer}"></footer>
+</body>
+</html>
