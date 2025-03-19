@@ -28,7 +28,9 @@
         <div class="level mt-1 ml-4">
           <div class="level-left">
             <div data-th-each="productCategory : ${product.productCategories}" class="level-item">
-              <span data-th-text="${productCategory.category}" class="tag is-link">Course Category</span>
+              <span data-th-text="${productCategory.category}" class="tag is-link">
+                Course Category
+              </span>
             </div>
           </div>
         </div>
@@ -45,10 +47,18 @@
               </figure>
 
             </div>
-            <div data-th-text="${product.author.firstName + ' ' + product.author.lastName}" class="level-item"></div>
+            <div
+                data-th-text="${product.author.firstName + ' ' + product.author.lastName}"
+                class="level-item"
+            >
+            </div>
           </div>
           <div class="level-right">
-            <div data-th-text="${product.price >0 ? '$' + product.price : 'FREE'}" class="level-item pr-4"></div>
+            <div
+                data-th-text="${product.price >0 ? '$' + product.price : 'FREE'}"
+                class="level-item pr-4"
+            >
+            </div>
           </div>
         </div>
       </div>
@@ -60,7 +70,12 @@
         </div>
 
         <div class="block">
-          <button data-th-text="#{page.product.button.buy-now}" class="button is-link is-pulled-right">Buy now</button>
+          <button
+              data-th-text="#{page.product.button.buy-now}"
+              class="button is-link is-pulled-right"
+          >
+            Buy now
+          </button>
         </div>
       </div>
     </div>

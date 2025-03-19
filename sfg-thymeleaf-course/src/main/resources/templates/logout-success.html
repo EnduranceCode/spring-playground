@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mastering Thymeleaf with Spring Boot - Checkout Complete</title>
+  <title>Mastering Thymeleaf with Spring Boot - Logout Success</title>
 
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
@@ -16,15 +16,10 @@
 
 <main class="section is-large">
   <div class="container  is-max-tablet">
-    <article class="box has-background-success">
-      <div class="level">
-        <div class="level-left">
-          <p class="level-item"><strong>Username:</strong></p>
-        </div>
-        <div class="level-right">
-          <div data-th-text="${loginDTO.username}" class="level-item">username</div>
-        </div>
-      </div>
+    <article class="box has-background-warning">
+      <article class="notification is-warning">
+        <p class="has-text-centered">You are logged out!</p>
+      </article>
     </article>
   </div>
 </main>

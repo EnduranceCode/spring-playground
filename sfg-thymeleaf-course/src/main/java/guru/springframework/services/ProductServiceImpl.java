@@ -63,10 +63,12 @@ public class ProductServiceImpl implements ProductService {
     productMap.put(3, getThymeleaf(jt, thymeleafCategory));
     productMap.put(4, getSpringCore(jt, springCoreCategory, springBootCategory));
     productMap.put(5, getSpringCoreAdvanced(jt, springCoreCategory, springBootCategory));
-    productMap.put(6, getSpringCoreDevOps(jt, springCoreCategory, springBootCategory, geapCategory));
+    productMap.put(
+        6, getSpringCoreDevOps(jt, springCoreCategory, springBootCategory, geapCategory));
   }
 
-  private static Product getSpringIntro(Author jt, ProductCategory springIntroCategory, ProductCategory springBootCategory) {
+  private static Product getSpringIntro(
+      Author jt, ProductCategory springIntroCategory, ProductCategory springBootCategory) {
 
     Product springIntro = new Product();
     springIntro.setId(1);
@@ -95,7 +97,8 @@ public class ProductServiceImpl implements ProductService {
     return springIntro;
   }
 
-  private static Product getSpringCoreUltimate(Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory) {
+  private static Product getSpringCoreUltimate(
+      Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory) {
     Product springCoreUltimate = new Product();
     springCoreUltimate.setId(2);
     springCoreUltimate.setCourseName("Spring Core Ultimate");
@@ -150,7 +153,8 @@ public class ProductServiceImpl implements ProductService {
     return thymeleaf;
   }
 
-  private static Product getSpringCore(Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory) {
+  private static Product getSpringCore(
+      Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory) {
     Product springCore = new Product();
     springCore.setId(4);
     springCore.setCourseName("Spring Core");
@@ -178,7 +182,8 @@ public class ProductServiceImpl implements ProductService {
     return springCore;
   }
 
-  private static Product getSpringCoreAdvanced(Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory) {
+  private static Product getSpringCoreAdvanced(
+      Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory) {
     Product springCoreAdv = new Product();
     springCoreAdv.setId(5);
     springCoreAdv.setCourseName("Spring Core Advanced");
@@ -206,7 +211,10 @@ public class ProductServiceImpl implements ProductService {
     return springCoreAdv;
   }
 
-  private static Product getSpringCoreDevOps(Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory, ProductCategory geapCategory) {
+  private static Product getSpringCoreDevOps(
+      Author jt, ProductCategory springCoreCategory, ProductCategory springBootCategory,
+      ProductCategory geapCategory
+  ) {
     Product springCoreDevOps = new Product();
     springCoreDevOps.setId(6);
     springCoreDevOps.setCourseName("Spring Core Dev-Ops");

@@ -16,7 +16,12 @@
 
 <main class="section">
   <div class="container is-max-tablet">
-    <form data-th-object="${checkoutDTO}" data-th-action="@{/do-checkout}" method="post" class="box">
+    <form
+        data-th-object="${checkoutDTO}"
+        data-th-action="@{/do-checkout}"
+        method="post"
+        class="box"
+    >
       <div class="field">
         <label class="label">First Name</label>
         <div class="control">
@@ -86,7 +91,12 @@
       <div class="field">
         <label class="label">Address Line 2</label>
         <div class="control">
-          <input data-th-field="*{addressLine2}" type="text" placeholder="Address Line 2" class="input">
+          <input
+              data-th-field="*{addressLine2}"
+              type="text"
+              placeholder="Address Line 2"
+              class="input"
+          >
         </div>
       </div>
 

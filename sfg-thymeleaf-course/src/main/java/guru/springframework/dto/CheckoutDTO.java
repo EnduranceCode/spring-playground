@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.NotEmpty;
 
 public class CheckoutDTO {
+
   @NotEmpty
   @Size(min = 2, max = 50)
   private String firstName;

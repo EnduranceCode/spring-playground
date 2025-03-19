@@ -1,6 +1,7 @@
 package guru.springframework.domain;
 
 public class ProductCategory {
+
   private Integer id;
   private String category;
 

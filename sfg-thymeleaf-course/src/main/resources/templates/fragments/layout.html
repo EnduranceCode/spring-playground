@@ -17,14 +17,33 @@
     <a href="/" data-th-href="@{/}">
       <p class="title">Spring Framework Guru</p>
     </a>
-    <p data-th-text="#{page.product.hero-subtitle}" class="subtitle">Online Courses for Spring Framework</p>
+    <p data-th-text="#{page.product.hero-subtitle}" class="subtitle">
+      Online Courses for Spring Framework
+    </p>
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item"></div>
+      </div>
+      <div class="level-right">
+        <div data-sec-authorize="!isAuthenticated()" class="level-item">
+          <span class="tag is-warning">Anonymous</span>
+        </div>
+        <div data-sec-authorize="isAuthenticated()" class="level-item">
+          <span data-sec-authentication="principal.username" class="tag is-success">username</span>
+          <span data-sec-authorize="hasRole('ROLE_ADMIN')" class="tag is-link ml-2">ADMIN</span>
+          <span data-sec-authorize="hasRole('ROLE_USER')" class="tag is-link ml-2">USER</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer data-th-fragment="footer" class="footer has-background-grey">
   <div class="content has-text-centered">
     <p>
-      <a href="https://www.udemy.com/course/mastering-thymeleaf-with-spring/">Mastering Thymeleaf with Spring Boot</a>
+      <a href="https://www.udemy.com/course/mastering-thymeleaf-with-spring/">
+        Mastering Thymeleaf with Spring Boot
+      </a>
       is presented by <a href="https://twitter.com/serge_a_storms">John Thompson</a>
     </p>
   </div>
