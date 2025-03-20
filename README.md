@@ -18,6 +18,12 @@ The folder [`sfg-thymeleaf-course`](./sfg-thymeleaf-course/) contains the code w
 the course [Mastering Thymeleaf with Spring Boot](https://www.udemy.com/course/mastering-thymeleaf-with-spring/)
 which is presented by [John Thompson](https://twitter.com/serge_a_storms).
 
+## Spring Security 6 Zero to Master
+
+The folder [`ss6-zero-master`](./ss6-zero-master) contains the code written while taking the course
+[Spring Security 6 Zero to Master](https://www.udemy.com/course/spring-security-zero-to-master/)
+which is presented by [Madan Reddy](https://github.com/eazybytes).
+
 ### Spring at Pluralsight
 
 The folder [`spring-pluralsight`](./spring-pluralsight/) contains the code written while taking
